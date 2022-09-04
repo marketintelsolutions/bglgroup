@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.white-bg-image{
+  background-image: url('../src/assets/pattern-white.svg');
+  background-position: center;
+}
+.pattern-dark{
+  background-image: url('../src/assets/pattern-dark.svg');
+  background-position: center;
+}
