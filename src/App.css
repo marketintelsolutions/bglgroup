@@ -44,3 +44,17 @@
   background-image: url('../src/assets/pattern-dark.svg');
   background-position: center;
 }
+.first-bg{
+  /* background-image: url('../src/assets/pexels-essow-936722.jpeg'); */
+  background-position: center;
+  /* background: #eb01a5;
+  background-image: url("../src/assets/pexels-essow-936722.jpeg"), linear-gradient(white, black);  */
+  background: linear-gradient(
+
+    rgba(0,0,0, 0.5),
+    rgba(0,0,0, 0.5)
+  ),url('../src/assets/pexels-essow-936722.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}

@@ -1,11 +1,15 @@
 import React from "react";
+import { ReactComponent as BlueDot } from "../../assets/blue-dot-left-bars.svg";
+import { ReactComponent as YellowDot } from "../../assets/yellow-dot-right-shield.svg";
 
 export default function About() {
   return (
-    <section class="py-20 xl:pt-24 xl:pb-28 bg-white white-bg-image" id="About">
+    <section class="py-20 xl:pt-24 xl:pb-28 bg-white  relative" id="About">
+      <BlueDot class="hidden lg:block absolute -top-20  left-0 mt-24" />
+      <YellowDot class="hidden lg:block absolute top-50 right-0 mt-40" />
       <div class="container px-4 mx-auto">
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full lg:w-1/2 px-4 mb-5 lg:mb-0">
+        <div class="flex flex-wrap mx-auto lg:w-[70%]">
+          <div class="w-full px-4 mb-5 lg:mb-0">
             <span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
               About Us
             </span>
@@ -47,16 +51,11 @@ export default function About() {
               With the emergence of Africa as a powerful invest- ment
               destination and with the continued opening up and development of
               the continent's financial markets, we have taken bold steps to
-              international-
-            </p>
-          </div>
-          <div class="w-full lg:w-1/2 px-4">
-            <p class="text-lg font-medium leading-7 text-coolGray-500">
-              ize our operations with plans for a footprint in key growing
-              African Markets and also in developed Western Markets via a
-              combination of alliances and GL owned offices. This expansion will
-              help strengthen our origination capabilities in Africa and also
-              our distribution capabilities in developed western markets.
+              internationalize our operations with plans for a footprint in key
+              growing African Markets and also in developed Western Markets via
+              a combination of alliances and GL owned offices. This expansion
+              will help strengthen our origination capabilities in Africa and
+              also our distribution capabilities in developed western markets.
             </p>
             <p class="my-5 text-lg font-medium leading-7 text-coolGray-500">
               <span>
@@ -87,6 +86,86 @@ export default function About() {
               as a behavioral practice for all our staff and ensure forms a
               critical part of our culture.
             </p>
+          </div>
+        </div>
+
+        <div className="relative text-center mt-32">
+          <BlueDot class="hidden lg:block absolute top-0 left-0 mt-24" />
+          <YellowDot class="hidden lg:block absolute top-0 right-0 mt-40" />
+          <div className="lg:w-[70%] mx-auto">
+            <div class="flex flex-wrap">
+              <div class="w-full px-4 mb-5 lg:mb-0">
+                <span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
+                  Mission
+                </span>
+                <h3 class="mb-5 text-3xl md:text-4xl text-coolGray-900 font-bold tracking-tighter">
+                  Our Mission Statement
+                </h3>
+                <p class="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
+                  "GL will actively seek the best opportunities to bring people
+                  and knowledge together to deliver values greater than the sum
+                  of its parts"
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap my-10">
+              <div class="w-full px-4 mb-5 lg:mb-0">
+                <span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
+                  Vision
+                </span>
+                <h3 class="mb-5 text-3xl md:text-4xl text-coolGray-900 font-bold tracking-tighter">
+                  Our Vision Statement
+                </h3>
+                <p class="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
+                  "To champion wealth creation that makes a positive impact on
+                  society"
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap">
+              <div class="w-full px-4 mb-5 lg:mb-0">
+                <span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
+                  Values
+                </span>
+                <h3 class="mb-5 text-3xl md:text-4xl text-coolGray-900 font-bold tracking-tighter">
+                  Our Values
+                </h3>
+                <div className="mb-5">
+                  <p class="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
+                    Connectedness
+                  </p>
+                  <p class="text-lg font-medium leading-7 text-coolGray-500">
+                    GL is well connected to its people: clients, employees,
+                    communities and partners throughout the global investment
+                    banking fraternity. Because we know that well connected
+                    institutions that give their customers access to a wide
+                    range of life-transforming opportunities are rare.
+                  </p>
+                </div>
+                <div className="mb-5">
+                  <p class="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
+                    Trailblazing
+                  </p>
+                  <p class="text-lg font-medium leading-7 text-coolGray-500">
+                    Fresh thinking, future focus, impeccable innovation and
+                    imagination sets BGL apart. Into Africa and out of Africa,
+                    BGL's footprint is expanding with new products and services
+                    to match changing times and to complement the evolving
+                    business and investment character of our clients.
+                  </p>
+                </div>
+                <div className="mb-5">
+                  <p class="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
+                    Can do
+                  </p>
+                  <p class="text-lg font-medium leading-7 text-coolGray-500">
+                    BGL's ambitious, energetic spirit embraces the new: new
+                    approaches, new directions, new oppor- tunities, new growth,
+                    and new wealth creation.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

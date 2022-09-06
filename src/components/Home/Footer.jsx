@@ -2,28 +2,33 @@ import React from "react";
 import { ReactComponent as Logo } from "../../assets/flex-ui-green-light.svg";
 import { ReactComponent as AppStore } from "../../assets/app-store.svg";
 import { ReactComponent as GooglePlay } from "../../assets/google-play.svg";
-
+import GreenLight from "../../assets/bgl.jpeg";
 export default function Footer() {
   return (
     <section class="bg-white overflow-hidden white-bg-image">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap lg:items-center pt-24 pb-12 -mx-4">
-          <div class="w-full md:w-3/4 px-4">
-            {/* <a class="block mb-8 max-w-max" href="#">
-              <Logo class="h-8" />
-            </a> */}
+          <div class="w-full md:w-3/4 px-4 lg:flex items-center">
             <a
               class="block max-w-max text-green-500 text-3xl font-extrabold mb-8"
               href="#"
             >
               {/* <GreenLight class="h-8" /> */}
-              BGL
+              <img src={GreenLight} alt="" width="80px" />
             </a>
-            <p class="mb-12 text-base md:text-lg text-coolGray-400 font-medium md:max-w-sm">
+            <p class="lg:ml-10 text-base md:text-lg text-coolGray-400 font-medium md:max-w-sm">
               Bringing it all together
             </p>
-            <div class="mb-12 md:mb-0 flex flex-wrap -mx-3 md:-mx-6">
-              <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
+            <div class=" md:mb-0 flex flex-wrap lg:ml-10">
+              <div class="w-full md:w-auto p-3  md:py-0 md:px-6">
+                <a
+                  class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium"
+                  href="#About"
+                >
+                  About Us
+                </a>
+              </div>
+              <div class="w-full md:w-auto p-3  md:py-0 md:px-6">
                 <a
                   class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium"
                   href="#Numbers"
@@ -31,20 +36,12 @@ export default function Footer() {
                   Numbers
                 </a>
               </div>
-              <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
+              <div class="w-full md:w-auto p-3  md:py-0 md:px-6">
                 <a
                   class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium"
                   href="#Contact"
                 >
                   Contact
-                </a>
-              </div>
-              <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
-                <a
-                  class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium"
-                  href="#About"
-                >
-                  About Us
                 </a>
               </div>
             </div>

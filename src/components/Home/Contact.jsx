@@ -13,9 +13,8 @@ export default function Contact() {
             Let’s stay connected
           </h3>
           <p class="text-lg md:text-xl text-coolGray-500 font-medium">
-            It's never been easier to get in touch with BGL. Call us, use our
-            live chat widget or email and we'll get back to you as soon as
-            possible!
+            It's never been easier to get in touch with BGL. Call us or email
+            and we'll get back to you as soon as possible!
           </p>
         </div>
         <div class="flex flex-wrap -mx-4 pb-16">
@@ -41,9 +40,9 @@ export default function Contact() {
               </h3>
               <a
                 class="text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-                href="mailto:info@bglitd.com"
+                href="mailto:info@bglgroup.ng"
               >
-                info@bglitd.com
+                info@bglgroup.ng
               </a>
             </div>
           </div>
@@ -155,6 +154,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
+
         <img
           class="relative mx-auto h-72 md:h-auto -mb-32 md:-mb-80 object-cover"
           src={ContactMap}

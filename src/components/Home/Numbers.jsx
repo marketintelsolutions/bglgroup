@@ -16,7 +16,7 @@ export default function Numbers() {
           </h3>
           <p class="mb-16 xl:mb-24 mx-auto text-lg md:text-xl text-coolGray-500 font-medium max-w-4xl">
             With Shareholders Funds in excess of N49bn (USD 300MM) and a
-            presence in 28 locations throughout Nigeria, GL is uniquely
+            presence in 28 locations throughout Nigeria, BGL is uniquely
             positioned to provide unri- valled full fledged investment banking
             services.
           </p>

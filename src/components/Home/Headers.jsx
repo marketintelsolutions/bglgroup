@@ -2,14 +2,14 @@ import React from "react";
 import { ReactComponent as FiveSVG } from "../../assets/flex-ui-green.svg";
 import { ReactComponent as WaveGreen } from "../../assets/wave-green.svg";
 import { ReactComponent as WaveYellow } from "../../assets/wave-yellow.svg";
-import { ReactComponent as GreenLight } from "../../assets/flex-ui-green-light.svg";
+import GreenLight from "../../assets/bgl-removebg-preview.png";
 import PlaceHolderVideo2 from "../../assets/placeholder-video2.png";
 import VideoFrame from "../../assets/video-frame.jpeg";
 
 export default function Headers() {
   return (
     <section class="overflow-hidden">
-      <div class="relative bg-white overflow-hidden white-bg-image">
+      <div class="relative overflow-hidden first-bg text-white">
         <div class="bg-transparent">
           <nav class="flex justify-between p-6 px-4">
             <div class="flex justify-between items-center w-full">
@@ -19,11 +19,20 @@ export default function Headers() {
                   href="#"
                 >
                   {/* <GreenLight class="h-8" /> */}
-                  BGL
+                  <img src={GreenLight} alt="" width="100px" />
+                  {/* BGL */}
                 </a>
               </div>
               <div class="w-1/2 xl:w-1/3">
                 <ul class="hidden xl:flex xl:justify-center">
+                  <li class="mr-12">
+                    <a
+                      class="text-coolGray-500 hover:text-coolGray-900 font-medium"
+                      href="#About"
+                    >
+                      About Us
+                    </a>
+                  </li>
                   <li class="mr-12">
                     <a
                       class="text-coolGray-500 hover:text-coolGray-900 font-medium"
@@ -40,25 +49,18 @@ export default function Headers() {
                       Contact
                     </a>
                   </li>
-                  <li class="mr-12">
-                    <a
-                      class="text-coolGray-500 hover:text-coolGray-900 font-medium"
-                      href="#About"
-                    >
-                      About Us
-                    </a>
-                  </li>
                 </ul>
               </div>
               <div class="w-1/2 xl:w-1/3">
                 <div class="hidden xl:flex items-center justify-end">
                   <a
-                    class="inline-block py-2 px-4 text-sm leading-5 text-green-50 bg-green-500 hover:bg-green-600 font-medium focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
-                    href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                    download
-                    target="_blank"
+                    class="inline-block py-2 px-4 text-sm leading-5 border border-green-50 text-green-500 hover:text-green-600 font-medium focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
+                    // href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                    // download
+                    // target="_blank"
+                    href="#"
                   >
-                    Scheme of Things
+                    Login
                   </a>
                 </div>
               </div>
@@ -97,6 +99,14 @@ export default function Headers() {
                     <li>
                       <a
                         class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                        href="#About"
+                      >
+                        About Us
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
                         href="#Numbers"
                       >
                         Numbers
@@ -110,25 +120,17 @@ export default function Headers() {
                         Contact
                       </a>
                     </li>
-
-                    <li>
-                      <a
-                        class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
-                        href="#About"
-                      >
-                        About Us
-                      </a>
-                    </li>
                   </ul>
                   <div class="flex flex-wrap">
                     <div class="w-full">
                       <a
-                        class="inline-block py-2 px-4 w-full text-sm leading-5 text-white bg-green-500 hover:bg-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
-                        href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                        download
-                        target="_blank"
+                        class="inline-block py-2 px-4 w-full text-sm leading-5 border-white text-green-500 hover:text-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
+                        // href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                        // download
+                        // target="_blank"
+                        href="#"
                       >
-                        Scheme of Things
+                        Login
                       </a>
                     </div>
                   </div>
@@ -170,7 +172,7 @@ export default function Headers() {
                     download
                     target="_blank"
                   >
-                    Scheme of Things
+                    Scheme of Arrangement
                   </a>
                 </div>
               </div>
@@ -178,7 +180,7 @@ export default function Headers() {
           </div>
         </div>
       </div>
-      <div class="container px-4 py-20 md:pb-32 mx-auto -mt-32 md:-mt-72">
+      {/* <div class="container px-4 py-20 md:pb-32 mx-auto -mt-32 md:-mt-72">
         <div class="relative mx-auto max-w-max">
           <WaveGreen class="absolute z-20 -left-8 -top-8 w-28 md:w-auto" />
           <WaveYellow class="absolute -right-8 -bottom-8 w-28 md:w-auto" />
@@ -211,7 +213,7 @@ export default function Headers() {
             </video>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
