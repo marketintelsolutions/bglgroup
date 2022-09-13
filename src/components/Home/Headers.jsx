@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { ReactComponent as FiveSVG } from "../../assets/flex-ui-green.svg";
-import { ReactComponent as WaveGreen } from "../../assets/wave-green.svg";
-import { ReactComponent as WaveYellow } from "../../assets/wave-yellow.svg";
 import GreenLight from "../../assets/bgl-removebg-preview.png";
-import PlaceHolderVideo2 from "../../assets/placeholder-video2.png";
-import VideoFrame from "../../assets/video-frame.jpeg";
+import EmailModal from "../Auth/EmailModal";
+import { Link } from "react-router-dom";
 
 export default function Headers() {
+  let [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
   return (
     <section class="overflow-hidden">
       <div class="relative overflow-hidden first-bg text-white">
@@ -53,15 +61,15 @@ export default function Headers() {
               </div>
               <div class="w-1/2 xl:w-1/3">
                 <div class="hidden xl:flex items-center justify-end">
-                  <a
+                  <Link
                     class="inline-block py-2 px-4 text-sm leading-5 border border-green-50 text-green-500 hover:text-green-600 font-medium focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
                     // href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
                     // download
                     // target="_blank"
-                    href="#"
+                    to={"/login?purpose=account"}
                   >
                     Login
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -123,15 +131,15 @@ export default function Headers() {
                   </ul>
                   <div class="flex flex-wrap">
                     <div class="w-full">
-                      <a
+                      <Link
                         class="inline-block py-2 px-4 w-full text-sm leading-5 border-white text-green-500 hover:text-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
                         // href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
                         // download
                         // target="_blank"
-                        href="#"
+                        to={"/login?purpose=account"}
                       >
                         Login
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -166,54 +174,27 @@ export default function Headers() {
               </p>
               <div class="flex flex-wrap justify-center">
                 <div class="w-full md:w-auto py-1 md:py-0 md:mr-4">
-                  <a
+                  <Link
                     class="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-green-50 font-medium text-center bg-green-500 hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-green-500 rounded-md shadow-sm"
-                    href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                    download
-                    target="_blank"
+                    // href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                    // download
+                    // target="_blank"
+                    to="/login?purpose=download"
                   >
                     Scheme of Arrangement
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <div class="container px-4 py-20 md:pb-32 mx-auto -mt-32 md:-mt-72">
-        <div class="relative mx-auto max-w-max">
-          <WaveGreen class="absolute z-20 -left-8 -top-8 w-28 md:w-auto" />
-          <WaveYellow class="absolute -right-8 -bottom-8 w-28 md:w-auto" />
-          <svg
-            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 cursor-pointer text-green-500 hover:text-green-600"
-            width="64"
-            height="64"
-            viewBox="0 0 64 64"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="32" cy="32" r="32" fill="currentColor"></circle>
-            <path
-              class="text-white"
-              d="M40.5 31.13L26.5 23.05C26.348 22.9622 26.1755 22.916 26 22.916C25.8245 22.916 25.652 22.9622 25.5 23.05C25.3474 23.1381 25.2208 23.265 25.133 23.4177C25.0452 23.5705 24.9993 23.7438 25 23.92V40.08C24.9993 40.2562 25.0452 40.4295 25.133 40.5822C25.2208 40.735 25.3474 40.8619 25.5 40.95C25.652 41.0378 25.8245 41.084 26 41.084C26.1755 41.084 26.348 41.0378 26.5 40.95L40.5 32.87C40.6539 32.7828 40.7819 32.6563 40.871 32.5035C40.96 32.3506 41.007 32.1769 41.007 32C41.007 31.8231 40.96 31.6494 40.871 31.4965C40.7819 31.3437 40.6539 31.2172 40.5 31.13ZM27 38.35V25.65L38 32L27 38.35Z"
-              fill="currentColor"
-            ></path>
-          </svg>
-          <div class="relative overflow-hidden rounded-3xl">
-            <img src={PlaceHolderVideo2} />
-            <video
-              class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 min-h-full min-w-full max-w-none"
-              poster={VideoFrame}
-              muted=""
-            >
-              <source
-                src="https://static.shuffle.dev/files/video-placeholder.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
-        </div>
-      </div> */}
+
+      <EmailModal
+        isOpen={isOpen}
+        closeModal={closeModal}
+        openModal={openModal}
+      />
     </section>
   );
 }

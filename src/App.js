@@ -1,19 +1,21 @@
 import logo from "./logo.svg";
+import "antd/dist/antd.css";
 import "./App.css";
-import Homepage from "./components/Homepage";
-import Numbers from "./components/Home/Numbers";
-import Contact from "./components/Home/Contact";
-import About from "./components/Home/About";
-import Footer from "./components/Home/Footer";
+import Homepage from "./Screens/Homepage";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import LoginPage from "./Screens/LoginPage";
+import AccountBalance from "./Screens/AccountBalance";
 
 function App() {
   return (
     <div className="">
-      <Homepage />
-      <Numbers />
-      <Contact />
-      <About />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/account" element={<AccountBalance />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<Homepage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
