@@ -1,5 +1,5 @@
 import React from "react";
-import ContactMap from "../../assets/contact-map.png";
+import ContactMap from "../../assets/contact-map-3.png";
 
 export default function Contact() {
   return (
@@ -156,7 +156,7 @@ export default function Contact() {
         </div>
 
         <img
-          class="relative mx-auto h-72 md:h-auto -mb-32 md:-mb-80 object-cover"
+          class="relative mx-auto h-72 md:h-auto -mb-32 md:-mb-80 object-cover rounded-lg"
           src={ContactMap}
           alt=""
         />

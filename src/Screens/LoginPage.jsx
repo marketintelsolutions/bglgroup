@@ -41,7 +41,7 @@ export default function LoginPage() {
       setSendingEmail(false);
       parsed.email = email;
       const stringified = queryString.stringify(parsed);
-      alert(`Email sent to ${email}`);
+      // alert(`Email sent to ${email}`);
       navigate(`/login?${stringified}`);
     }, 2000);
   };

@@ -6,6 +6,7 @@ import AccountBalance from "./Screens/AccountBalance";
 import Alert from "./components/Alerts/Alert";
 import AdminLoginPage from "./Screens/AdminLoginPage";
 import Dashboard from "./Screens/Dashboard";
+import SchemeofArrangement from "./Screens/SchemeofArrangement";
 
 function App() {
   return (
@@ -13,6 +14,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/account" element={<AccountBalance />} />
+          <Route
+            path="/scheme-of-arrangement"
+            element={<SchemeofArrangement />}
+          />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/admin-login" element={<AdminLoginPage />} />
