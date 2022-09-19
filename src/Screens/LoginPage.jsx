@@ -7,7 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import queryString from "query-string";
-import { message } from "antd";
+
 import download from "../utils/download";
 
 export default function LoginPage() {
@@ -41,7 +41,7 @@ export default function LoginPage() {
       setSendingEmail(false);
       parsed.email = email;
       const stringified = queryString.stringify(parsed);
-      message.success(`Email sent to ${email}`);
+      alert(`Email sent to ${email}`);
       navigate(`/login?${stringified}`);
     }, 2000);
   };
@@ -56,7 +56,7 @@ export default function LoginPage() {
     e.preventDefault();
     const correctPasscode = "12345";
     if (passcode !== correctPasscode) {
-      return message.error("Incorrect Passcode");
+      return alert("Incorrect Passcode");
     }
     //Set access and time in local storage
     localStorage.setItem(
