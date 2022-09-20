@@ -46,6 +46,7 @@ export default function SchemeofArrangement() {
                 placeholder="************"
                 onChange={(e) => setPassword(e.target.value)}
                 required
+                type="password"
               />
             </div>
 

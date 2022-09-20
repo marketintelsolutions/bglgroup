@@ -140,6 +140,7 @@ export default function LoginPage() {
                   placeholder="************"
                   onChange={(e) => setPasscode(e.target.value)}
                   required
+                  type="password"
                 />
               </div>
               <div class="flex flex-wrap items-center justify-between mb-6">
