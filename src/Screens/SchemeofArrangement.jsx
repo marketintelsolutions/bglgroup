@@ -21,7 +21,7 @@ export default function SchemeofArrangement() {
     setTimeout(() => {
       setLoading(false);
       download(
-        "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+        "https://bglgroup.s3.eu-west-2.amazonaws.com/BGL+SCHEME+OF+ARRANGEMENT_FINAL.pdf"
       );
       navigate("/");
     }, 3000);
@@ -64,6 +64,13 @@ export default function SchemeofArrangement() {
               Download
             </button>
             <small class=" text-red-500 font-medium ">{error}</small>
+            <p class="text-lg text-gray-700 font-medium ">
+              Please call help desk on{" "}
+              <a href="tel:08109976905" className="text-gray-700">
+                08109976905
+              </a>{" "}
+              to obtain your access code.
+            </p>
           </form>
         </div>
       </div>

@@ -69,9 +69,9 @@ export default function Contact() {
 
               <a
                 class="text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-                href="tel:+234-1-2805554"
+                href="tel:+2348109976905"
               >
-                +234-1-2805554
+                08109976905
               </a>
             </div>
           </div>

@@ -20,14 +20,10 @@ export default function LoginPage() {
   for (let entry of searchParams.entries()) {
     params.push(entry);
   }
-  console.log({ searchParams: searchParams.entries() });
 
   const { search } = useLocation();
   const parsed = queryString.parse(search);
-  console.log({ parsed });
-  console.log({ search });
   const emailHasBeenSent = typeof parsed.email === "string";
-  console.log({ emailHasBeenSent });
   const navigate = useNavigate();
 
   const onSubmit = (e) => {
@@ -73,7 +69,6 @@ export default function LoginPage() {
     if (purpose === "account") {
       navigate(`/account?email=${parsed.email}`);
     }
-    console.log({ purpose });
   };
   return (
     <section class="py-24 md:py-32 bg-white white-bg-image text-center">
@@ -108,10 +103,6 @@ export default function LoginPage() {
               </div>
 
               <>
-                <p class="text-lg text-coolGray-500 font-medium ">
-                  Passcode will be sent to{" "}
-                  {email || parsed.email || "your email"}.
-                </p>
                 <button
                   class="flex justify-center  py-3 px-7 my-6 w-full text-base text-green-50 font-medium text-center leading-6 bg-green-500 hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md shadow-sm"
                   disabled={sendingEmail}
@@ -125,6 +116,10 @@ export default function LoginPage() {
                   )}
                   Send Passcode
                 </button>
+                <p class="text-lg text-coolGray-500 font-medium ">
+                  Passcode will be sent to{" "}
+                  {email || parsed.email || "your email"}.
+                </p>
               </>
             </form>
           )}
