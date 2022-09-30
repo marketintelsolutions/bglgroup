@@ -2,35 +2,46 @@ import React, { useState } from "react";
 import GreenLight from "../assets/bgl-removebg-preview.png";
 import { Link, useNavigate } from "react-router-dom";
 import { auth, signInUser } from "../firebase/index.ts";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
-export default function AdminLoginPage() {
+export default function AdminSignUpPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [addingUser, setAddingUser] = useState(false);
   const [error, setError] = useState("");
+  const [successMessage, setsuccessMessage] = useState("");
 
   const navigate = useNavigate();
   const onSubmit = async (e) => {
     e.preventDefault();
     setAddingUser(true);
     setError("");
-
-    signInWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
-        navigate("/dashboard");
+        setEmail("");
+        setPassword("");
+        setsuccessMessage("New Admin Added");
+        // navigate("/dashboard");
+        document.getElementById("addNewAdminForm").reset();
       })
       .catch((error) => {
         const errorCode = error.code;
-
         const errorMessage = error.message;
+
         if (errorCode === "auth/user-not-found") {
           setError("User not found");
         }
         setError("Unkown Error, contact Admin");
       });
+    // const { error, user } = await signInUser(email, password);
 
+    // if (error) {
+    //   setError(error);
+    // }
+    // if (user) {
+    //   navigate("/dashboard");
+    // }
     setAddingUser(false);
   };
 
@@ -42,11 +53,21 @@ export default function AdminLoginPage() {
             <Link className="inline-block mb-6" to="/">
               <img src={GreenLight} alt="" width="100px" />
             </Link>
+            <div className="flex justify-center">
+              <small
+                className="  font-medium flex cursor-pointer"
+                onClick={() => {
+                  navigate("/dashboard");
+                }}
+              >
+                &#8249; Back to Dashboard
+              </small>
+            </div>
             <h3 className="mb-4 text-2xl md:text-3xl font-bold">
-              Sign in as an Admin
+              Register an Admin
             </h3>
           </div>
-          <form onSubmit={onSubmit}>
+          <form onSubmit={onSubmit} id="addNewAdminForm">
             <div className="mb-6">
               <input
                 className="appearance-none block w-full p-3 leading-5 text-coolGray-900 border border-coolGray-200 rounded-lg shadow-md placeholder-coolGray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
@@ -80,10 +101,13 @@ export default function AdminLoginPage() {
                   viewBox="0 0 24 24"
                 ></svg>
               )}
-              Submit
+              Register
             </button>
             <div className="flex justify-center">
               <small className=" text-red-500 font-medium ">{error}</small>
+              <small className=" text-green-500 font-medium ">
+                {successMessage}
+              </small>
             </div>
           </form>
         </div>

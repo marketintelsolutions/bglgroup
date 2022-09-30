@@ -4,30 +4,30 @@ import { ReactComponent as YellowDot } from "../../assets/yellow-dot-right-shiel
 
 export default function About() {
   return (
-    <section class="py-20 xl:pt-24 xl:pb-28 bg-white  relative" id="About">
-      <BlueDot class="hidden lg:block absolute -top-20  left-0 mt-24" />
-      <YellowDot class="hidden lg:block absolute top-50 right-0 mt-40" />
-      <div class="container px-4 mx-auto">
-        <div class="flex flex-wrap mx-auto lg:w-[70%]">
-          <div class="w-full px-4 mb-5 lg:mb-0">
-            <span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
+    <section className="py-20 xl:pt-24 xl:pb-28 bg-white  relative" id="About">
+      <BlueDot className="hidden lg:block absolute -top-20  left-0 mt-24" />
+      <YellowDot className="hidden lg:block absolute top-50 right-0 mt-40" />
+      <div className="container px-4 mx-auto">
+        <div className="flex flex-wrap mx-auto lg:w-[70%]">
+          <div className="w-full px-4 mb-5 lg:mb-0">
+            <span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
               About Us
             </span>
-            <h3 class="mb-5 text-3xl md:text-4xl text-coolGray-900 font-bold tracking-tighter">
+            <h3 className="mb-5 text-3xl md:text-4xl text-coolGray-900 font-bold tracking-tighter">
               BGL Group{" "}
             </h3>
-            <p class="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
+            <p className="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
               To champion wealth creation that makes a positive impact on
               society.
             </p>
-            <p class="mb-5 text-lg font-medium leading-7 text-coolGray-500">
+            <p className="mb-5 text-lg font-medium leading-7 text-coolGray-500">
               We are one of Africa's leading Investment Banking and Investment
               Groups headquartered in Lagos, Nigeria. We provide world class
               advisory services and products to clients that include Government,
               Corporations, Financial Institutions and Ultra High Net Worth
               Individuals.
             </p>
-            <p class="mb-5 text-lg font-medium leading-7 text-coolGray-500">
+            <p className="mb-5 text-lg font-medium leading-7 text-coolGray-500">
               Founded in 1993 and formerly known as Banc Garanti Limited, GL PIc
               commenced business as a Bank holding company with the aim of
               acquir- ing distressed or underperforming institutions in the
@@ -41,13 +41,13 @@ export default function About() {
               Mandates; our Securities Trading Platform and our unrivalled
               distribution capabilities.
             </p>
-            <p class="text-lg font-medium leading-7 text-coolGray-500">
+            <p className="text-lg font-medium leading-7 text-coolGray-500">
               With Shareholders Funds in excess of N49bn (USD 300MM) and a
               presence in 28 locations throughout Nigeria, GL is uniquely
               positioned to provide unri- valled full fledged investment banking
               services.
             </p>
-            <p class="text-lg font-medium leading-7 text-coolGray-500">
+            <p className="text-lg font-medium leading-7 text-coolGray-500">
               With the emergence of Africa as a powerful invest- ment
               destination and with the continued opening up and development of
               the continent's financial markets, we have taken bold steps to
@@ -57,7 +57,7 @@ export default function About() {
               will help strengthen our origination capabilities in Africa and
               also our distribution capabilities in developed western markets.
             </p>
-            <p class="my-5 text-lg font-medium leading-7 text-coolGray-500">
+            <p className="my-5 text-lg font-medium leading-7 text-coolGray-500">
               <span>
                 Our success over the years can be attributed to our values and
                 principles that put our clients at the centre of everything we
@@ -71,7 +71,7 @@ export default function About() {
             </p>
 
             <p></p>
-            <p class="text-lg font-medium leading-7 text-coolGray-500">
+            <p className="text-lg font-medium leading-7 text-coolGray-500">
               At BGL, we realise that our biggest assets are our people and our
               reputation. Integrity and honesty in everything we do is
               sacrosanct. We promote di- versity and place much emphasis on the
@@ -80,7 +80,7 @@ export default function About() {
               resources and opportunities to flour- ish and realize their
               potential.
             </p>
-            <p class="text-lg font-medium leading-7 text-coolGray-500">
+            <p className="text-lg font-medium leading-7 text-coolGray-500">
               These attributes are further exemplified in our mis- sion
               statement, vision statement and values which we aim to inculcate
               as a behavioral practice for all our staff and ensure forms a
@@ -90,51 +90,51 @@ export default function About() {
         </div>
 
         <div className="relative text-center mt-32">
-          <BlueDot class="hidden lg:block absolute top-0 left-0 mt-24" />
-          <YellowDot class="hidden lg:block absolute top-0 right-0 mt-40" />
+          <BlueDot className="hidden lg:block absolute top-0 left-0 mt-24" />
+          <YellowDot className="hidden lg:block absolute top-0 right-0 mt-40" />
           <div className="lg:w-[70%] mx-auto">
-            <div class="flex flex-wrap">
-              <div class="w-full px-4 mb-5 lg:mb-0">
-                <span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
+            <div className="flex flex-wrap">
+              <div className="w-full px-4 mb-5 lg:mb-0">
+                <span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
                   Mission
                 </span>
-                <h3 class="mb-5 text-3xl md:text-4xl text-coolGray-900 font-bold tracking-tighter">
+                <h3 className="mb-5 text-3xl md:text-4xl text-coolGray-900 font-bold tracking-tighter">
                   Our Mission Statement
                 </h3>
-                <p class="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
+                <p className="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
                   "GL will actively seek the best opportunities to bring people
                   and knowledge together to deliver values greater than the sum
                   of its parts"
                 </p>
               </div>
             </div>
-            <div class="flex flex-wrap my-10">
-              <div class="w-full px-4 mb-5 lg:mb-0">
-                <span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
+            <div className="flex flex-wrap my-10">
+              <div className="w-full px-4 mb-5 lg:mb-0">
+                <span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
                   Vision
                 </span>
-                <h3 class="mb-5 text-3xl md:text-4xl text-coolGray-900 font-bold tracking-tighter">
+                <h3 className="mb-5 text-3xl md:text-4xl text-coolGray-900 font-bold tracking-tighter">
                   Our Vision Statement
                 </h3>
-                <p class="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
+                <p className="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
                   "To champion wealth creation that makes a positive impact on
                   society"
                 </p>
               </div>
             </div>
-            <div class="flex flex-wrap">
-              <div class="w-full px-4 mb-5 lg:mb-0">
-                <span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
+            <div className="flex flex-wrap">
+              <div className="w-full px-4 mb-5 lg:mb-0">
+                <span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
                   Values
                 </span>
-                <h3 class="mb-5 text-3xl md:text-4xl text-coolGray-900 font-bold tracking-tighter">
+                <h3 className="mb-5 text-3xl md:text-4xl text-coolGray-900 font-bold tracking-tighter">
                   Our Values
                 </h3>
                 <div className="mb-5">
-                  <p class="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
+                  <p className="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
                     Connectedness
                   </p>
-                  <p class="text-lg font-medium leading-7 text-coolGray-500">
+                  <p className="text-lg font-medium leading-7 text-coolGray-500">
                     GL is well connected to its people: clients, employees,
                     communities and partners throughout the global investment
                     banking fraternity. Because we know that well connected
@@ -143,10 +143,10 @@ export default function About() {
                   </p>
                 </div>
                 <div className="mb-5">
-                  <p class="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
+                  <p className="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
                     Trailblazing
                   </p>
-                  <p class="text-lg font-medium leading-7 text-coolGray-500">
+                  <p className="text-lg font-medium leading-7 text-coolGray-500">
                     Fresh thinking, future focus, impeccable innovation and
                     imagination sets BGL apart. Into Africa and out of Africa,
                     BGL's footprint is expanding with new products and services
@@ -155,10 +155,10 @@ export default function About() {
                   </p>
                 </div>
                 <div className="mb-5">
-                  <p class="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
+                  <p className="mb-6 text-lg md:text-xl leading-8 text-coolGray-500 font-semibold">
                     Can do
                   </p>
-                  <p class="text-lg font-medium leading-7 text-coolGray-500">
+                  <p className="text-lg font-medium leading-7 text-coolGray-500">
                     BGL's ambitious, energetic spirit embraces the new: new
                     approaches, new directions, new oppor- tunities, new growth,
                     and new wealth creation.

@@ -7,6 +7,9 @@ import Alert from "./components/Alerts/Alert";
 import AdminLoginPage from "./Screens/AdminLoginPage";
 import Dashboard from "./Screens/Dashboard";
 import SchemeofArrangement from "./Screens/SchemeofArrangement";
+import UserDetailsPage from "./Screens/UserDetailsPage";
+import AddUserPage from "./Screens/AddUserPage";
+import AdminSignUpPage from "./Screens/AdminSignUpPage";
 
 function App() {
   return (
@@ -19,7 +22,10 @@ function App() {
             element={<SchemeofArrangement />}
           />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/add-user" element={<AddUserPage />} />
+          <Route path="/user" element={<UserDetailsPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/admin-signup" element={<AdminSignUpPage />} />
           <Route path="/admin-login" element={<AdminLoginPage />} />
           <Route path="/" element={<Homepage />} />
         </Routes>

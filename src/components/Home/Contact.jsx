@@ -3,26 +3,26 @@ import ContactMap from "../../assets/contact-map-3.png";
 
 export default function Contact() {
   return (
-    <section class="pt-20 bg-white white-bg-image" id="Contact">
-      <div class="container px-4 mx-auto">
-        <div class="max-w-4xl mx-auto mb-16 text-center">
-          <span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
+    <section className="pt-20 bg-white white-bg-image" id="Contact">
+      <div className="container px-4 mx-auto">
+        <div className="max-w-4xl mx-auto mb-16 text-center">
+          <span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-9xl">
             Contact
           </span>
-          <h3 class="mb-4 text-4xl md:text-5xl leading-tight text-darkCoolGray-900 font-bold tracking-tighter">
+          <h3 className="mb-4 text-4xl md:text-5xl leading-tight text-darkCoolGray-900 font-bold tracking-tighter">
             Let’s stay connected
           </h3>
-          <p class="text-lg md:text-xl text-coolGray-500 font-medium">
+          <p className="text-lg md:text-xl text-coolGray-500 font-medium">
             It's never been easier to get in touch with BGL. Call us or email
             and we'll get back to you as soon as possible!
           </p>
         </div>
-        <div class="flex flex-wrap -mx-4 pb-16">
-          <div class="w-full md:w-1/3 px-4 mb-10 md:mb-0">
-            <div class="max-w-xs mx-auto text-center">
-              <div class="inline-flex mb-6 items-center justify-center w-12 h-12 bg-green-500 rounded-full">
+        <div className="flex flex-wrap -mx-4 pb-16">
+          <div className="w-full md:w-1/3 px-4 mb-10 md:mb-0">
+            <div className="max-w-xs mx-auto text-center">
+              <div className="inline-flex mb-6 items-center justify-center w-12 h-12 bg-green-500 rounded-full">
                 <svg
-                  class="h-6 text-white"
+                  className="h-6 text-white"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -35,22 +35,22 @@ export default function Contact() {
                   ></path>
                 </svg>
               </div>
-              <h3 class="mb-2 text-2xl md:text-3xl leading-9 text-coolGray-800 font-bold">
+              <h3 className="mb-2 text-2xl md:text-3xl leading-9 text-coolGray-800 font-bold">
                 Email
               </h3>
               <a
-                class="text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
+                className="text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
                 href="mailto:info@bglgroup.ng"
               >
                 info@bglgroup.ng
               </a>
             </div>
           </div>
-          <div class="w-full md:w-1/3 px-4 mb-10 md:mb-0">
-            <div class="max-w-xs mx-auto text-center">
-              <div class="inline-flex mb-6 items-center justify-center w-12 h-12 bg-green-500 rounded-full">
+          <div className="w-full md:w-1/3 px-4 mb-10 md:mb-0">
+            <div className="max-w-xs mx-auto text-center">
+              <div className="inline-flex mb-6 items-center justify-center w-12 h-12 bg-green-500 rounded-full">
                 <svg
-                  class="h-6 text-white"
+                  className="h-6 text-white"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -63,23 +63,23 @@ export default function Contact() {
                   ></path>
                 </svg>
               </div>
-              <h3 class="mb-2 text-2xl md:text-3xl leading-9 text-coolGray-800 font-bold">
+              <h3 className="mb-2 text-2xl md:text-3xl leading-9 text-coolGray-800 font-bold">
                 Phone
               </h3>
 
               <a
-                class="text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
+                className="text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
                 href="tel:+2348109976905"
               >
                 08109976905
               </a>
             </div>
           </div>
-          <div class="w-full md:w-1/3 px-4">
-            <div class="max-w-xs mx-auto text-center">
-              <div class="inline-flex mb-6 items-center justify-center w-12 h-12 bg-green-500 rounded-full">
+          <div className="w-full md:w-1/3 px-4">
+            <div className="max-w-xs mx-auto text-center">
+              <div className="inline-flex mb-6 items-center justify-center w-12 h-12 bg-green-500 rounded-full">
                 <svg
-                  class="h-6 text-white"
+                  className="h-6 text-white"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -92,11 +92,11 @@ export default function Contact() {
                   ></path>
                 </svg>
               </div>
-              <h3 class="mb-3 text-2xl md:text-3xl font-bold leading-9 text-coolGray-900">
+              <h3 className="mb-3 text-2xl md:text-3xl font-bold leading-9 text-coolGray-900">
                 Socials
               </h3>
               <a
-                class="inline-block mr-8 text-green-500 hover:text-green-600"
+                className="inline-block mr-8 text-green-500 hover:text-green-600"
                 href="#"
               >
                 <svg
@@ -115,7 +115,7 @@ export default function Contact() {
                 </svg>
               </a>
               <a
-                class="inline-block mr-8 text-green-500 hover:text-green-600"
+                className="inline-block mr-8 text-green-500 hover:text-green-600"
                 href="#"
               >
                 <svg
@@ -135,7 +135,7 @@ export default function Contact() {
               </a>
 
               <a
-                class="inline-block text-green-500 hover:text-green-600"
+                className="inline-block text-green-500 hover:text-green-600"
                 href="#"
               >
                 <svg
@@ -156,13 +156,13 @@ export default function Contact() {
         </div>
 
         <img
-          class="relative mx-auto h-72 md:h-auto -mb-32 md:-mb-80 object-cover rounded-lg"
+          className="relative mx-auto h-72 md:h-auto -mb-32 md:-mb-80 object-cover rounded-lg"
           src={ContactMap}
           alt=""
         />
       </div>
-      <div class="h-2 bg-green-500"></div>
-      <div class="py-24 md:py-64 bg-coolGray-900 pattern-dark"></div>
+      <div className="h-2 bg-green-500"></div>
+      <div className="py-24 md:py-64 bg-coolGray-900 pattern-dark"></div>
     </section>
   );
 }

@@ -3,74 +3,83 @@ import { ReactComponent as Logo } from "../../assets/flex-ui-green-light.svg";
 import { ReactComponent as AppStore } from "../../assets/app-store.svg";
 import { ReactComponent as GooglePlay } from "../../assets/google-play.svg";
 import GreenLight from "../../assets/bgl.jpeg";
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
-    <section class="bg-white overflow-hidden white-bg-image">
-      <div class="container px-4 mx-auto">
-        <div class="flex flex-wrap lg:items-center pt-24 pb-12 -mx-4">
-          <div class="w-full md:w-3/4 px-4 lg:flex items-center">
+    <section className="bg-white overflow-hidden white-bg-image">
+      <div className="container px-4 mx-auto">
+        <div className="flex flex-wrap lg:items-center pt-24 pb-12 -mx-4">
+          <div className="w-full md:w-3/4 px-4 lg:flex items-center">
             <a
-              class="block max-w-max text-green-500 text-3xl font-extrabold mb-8"
+              className="block max-w-max text-green-500 text-3xl font-extrabold mb-8"
               href="#"
             >
-              {/* <GreenLight class="h-8" /> */}
+              {/* <GreenLight className="h-8" /> */}
               <img src={GreenLight} alt="" width="80px" />
             </a>
-            <p class="lg:ml-10 text-base md:text-lg text-coolGray-400 font-medium md:max-w-sm">
+            <p className="lg:ml-10 text-base md:text-lg text-coolGray-400 font-medium md:max-w-sm">
               Bringing it all together
             </p>
-            <div class=" md:mb-0 flex flex-wrap lg:ml-10">
-              <div class="w-full md:w-auto p-3  md:py-0 md:px-6">
+            <div className=" md:mb-0 flex flex-wrap lg:ml-10">
+              <div className="w-full md:w-auto p-3  md:py-0 md:px-6">
                 <a
-                  class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium"
+                  className="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium"
                   href="#About"
                 >
                   About Us
                 </a>
               </div>
-              <div class="w-full md:w-auto p-3  md:py-0 md:px-6">
+              <div className="w-full md:w-auto p-3  md:py-0 md:px-6">
                 <a
-                  class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium"
+                  className="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium"
                   href="#Numbers"
                 >
                   Numbers
                 </a>
               </div>
-              <div class="w-full md:w-auto p-3  md:py-0 md:px-6">
+              <div className="w-full md:w-auto p-3  md:py-0 md:px-6">
                 <a
-                  class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium"
+                  className="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium"
                   href="#Contact"
                 >
                   Contact
                 </a>
               </div>
+              <div className="w-full md:w-auto p-3  md:py-0 md:px-6">
+                <Link
+                  className="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium"
+                  to="/admin-login"
+                >
+                  Admin
+                </Link>
+              </div>
             </div>
           </div>
-          <div class="w-full md:w-1/4 px-4">
-            <div class="lg:pr-10 lg:ml-auto lg:max-w-max">
-              <a class="block mb-4" href="#">
+          <div className="w-full md:w-1/4 px-4">
+            <div className="lg:pr-10 lg:ml-auto lg:max-w-max">
+              <a className="block mb-4" href="#">
                 <AppStore />
               </a>
-              <a class="block" href="#">
+              <a className="block" href="#">
                 <GooglePlay />
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div class="border-b border-coolGray-100"></div>
-      <div class="container px-4 mx-auto">
-        <div class="flex flex-wrap items-center py-12 md:pb-32">
-          <div class="w-full md:w-1/2 mb-6 md:mb-0">
-            <p class="text-coolGray-400 font-medium">
+      <div className="border-b border-coolGray-100"></div>
+      <div className="container px-4 mx-auto">
+        <div className="flex flex-wrap items-center py-12 md:pb-32">
+          <div className="w-full md:w-1/2 mb-6 md:mb-0">
+            <p className="text-coolGray-400 font-medium">
               © 2021 BGL. All rights reserved.
             </p>
           </div>
-          <div class="w-full md:w-1/2">
-            <div class="flex flex-wrap md:justify-end -mx-5">
-              <div class="px-5">
+          <div className="w-full md:w-1/2">
+            <div className="flex flex-wrap md:justify-end -mx-5">
+              <div className="px-5">
                 <a
-                  class="inline-block text-coolGray-300 hover:text-coolGray-400"
+                  className="inline-block text-coolGray-300 hover:text-coolGray-400"
                   href="#"
                 >
                   <svg
@@ -89,9 +98,9 @@ export default function Footer() {
                   </svg>
                 </a>
               </div>
-              <div class="px-5">
+              <div className="px-5">
                 <a
-                  class="inline-block text-coolGray-300 hover:text-coolGray-400"
+                  className="inline-block text-coolGray-300 hover:text-coolGray-400"
                   href="#"
                 >
                   <svg
@@ -110,9 +119,9 @@ export default function Footer() {
                   </svg>
                 </a>
               </div>
-              <div class="px-5">
+              <div className="px-5">
                 <a
-                  class="inline-block text-coolGray-300 hover:text-coolGray-400"
+                  className="inline-block text-coolGray-300 hover:text-coolGray-400"
                   href="#"
                 >
                   <svg
@@ -131,9 +140,9 @@ export default function Footer() {
                   </svg>
                 </a>
               </div>
-              <div class="px-5">
+              <div className="px-5">
                 <a
-                  class="inline-block text-coolGray-300 hover:text-coolGray-400"
+                  className="inline-block text-coolGray-300 hover:text-coolGray-400"
                   href="#"
                 >
                   <svg
@@ -150,9 +159,9 @@ export default function Footer() {
                   </svg>
                 </a>
               </div>
-              <div class="px-5">
+              <div className="px-5">
                 <a
-                  class="inline-block text-coolGray-300 hover:text-coolGray-400"
+                  className="inline-block text-coolGray-300 hover:text-coolGray-400"
                   href="#"
                 >
                   <svg
