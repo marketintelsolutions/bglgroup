@@ -52,8 +52,8 @@ export default function LoginPage() {
     await sendEmail(
       userEmail,
       "Access Code - BGL Group",
-      "Please use this code to access your account as soon as possible. It expires in 30 minutes.",
-      "Please use this code to access your account as soon as possible. It expires in 30 minutes."
+      `Please use this code to access your account as soon as possible. It expires in 30 minutes. code - ${code}`,
+      `Please use this code to access your account as soon as possible. It expires in 30 minutes. code - ${code}`
     );
     await updateUser({
       ...data,
