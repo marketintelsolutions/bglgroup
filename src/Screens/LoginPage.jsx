@@ -13,6 +13,7 @@ import generateOTP from "../utils/generateOTP";
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [sendingEmail, setSendingEmail] = useState(false);
+  console.log({ sendingEmail });
   const [searchParams, setSearchParams] = useSearchParams();
   const [passcode, setPasscode] = useState("");
   const [error, setError] = useState("");
@@ -41,7 +42,7 @@ export default function LoginPage() {
     const { data, exists } = await checkUser(userEmail);
 
     if (!exists) {
-      setSendingEmail((v) => false);
+      setSendingEmail(false);
       setError("User not found");
       return;
     }
@@ -49,6 +50,7 @@ export default function LoginPage() {
     parsed.email = userEmail;
     const code = generateOTP();
     //TODO - Send Email to User
+    setSendingEmail(false);
     await sendEmail(
       userEmail,
       "Access Code - BGL Group",
@@ -74,12 +76,12 @@ export default function LoginPage() {
     const userEmail = email || parsed.email;
     const { data, exists } = await checkUser(userEmail);
     if (!exists) {
-      setVerifying((v) => false);
+      setVerifying(false);
       setPasscodeError("Account not found");
       return;
     }
     if (passcode !== data.code) {
-      setVerifying((v) => false);
+      setVerifying(false);
       setPasscodeError("Invalid Passcode");
       return;
     }
@@ -87,7 +89,7 @@ export default function LoginPage() {
     const passcodeHasExpired = Date.now() - data.codeGeneratedOn > 30 * 60000; //Code was generated more than 30 minutes ago.
 
     if (passcodeHasExpired) {
-      setVerifying((v) => false);
+      setVerifying(false);
       setPasscodeError("Passcode has expired");
       return;
     }
