@@ -66,7 +66,7 @@ export default function LoginPage() {
 
     const stringified = queryString.stringify(parsed);
     setSendingEmail(false);
-    navigate(`/login?${stringified}`);
+    window.location = `/login?${stringified}`;
   };
 
   const verifyPasscode = async (e) => {
