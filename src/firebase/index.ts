@@ -41,6 +41,7 @@ export const auth = getAuth();
 
 const usersRef = collection(db, "users");
 const mailRef = collection(db, "mail");
+const smsRef = collection(db, "messages");
 
 async function getUsers() {
   const usersCol = collection(db, "users");
@@ -136,6 +137,18 @@ const sendEmail = async (
       return null;
     });
 };
+const sendSMS = async (to: string, body: string) => {
+  await setDoc(doc(smsRef, (Math.random() * 1000000000000).toString()), {
+    to,
+    body,
+  })
+    .then((c) => {
+      console.log("Queued message for delivery!");
+    })
+    .catch((error) => {
+      return null;
+    });
+};
 
 export {
   getUsers,
@@ -146,4 +159,5 @@ export {
   signInUser,
   signUpUser,
   sendEmail,
+  sendSMS,
 };

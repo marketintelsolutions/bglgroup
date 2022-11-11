@@ -7,13 +7,18 @@ import {
   useLocation,
 } from "react-router-dom";
 import queryString from "query-string";
-import { checkUser, updateUser, sendEmail } from "../firebase/index.ts";
+import {
+  checkUser,
+  updateUser,
+  sendEmail,
+  sendSMS,
+} from "../firebase/index.ts";
 import generateOTP from "../utils/generateOTP";
+import { phone } from "phone";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [sendingEmail, setSendingEmail] = useState(false);
-  console.log({ sendingEmail });
   const [searchParams, setSearchParams] = useSearchParams();
   const [passcode, setPasscode] = useState("");
   const [error, setError] = useState("");
@@ -28,10 +33,23 @@ export default function LoginPage() {
   const { search } = useLocation();
   const parsed = queryString.parse(search);
   const emailHasBeenSent = typeof parsed.email === "string";
+  const phoneNumber = parsed.phoneNumber;
+  const phoneError = parsed.phoneError;
   const navigate = useNavigate();
+
+  const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
 
   const onSubmit = (e) => {
     e.preventDefault();
+    if (!validateEmail(email)) {
+      return setError("Enter a valid Email!");
+    }
     handleSendEmail();
   };
 
@@ -47,8 +65,22 @@ export default function LoginPage() {
       return;
     }
 
-    parsed.email = userEmail;
     const code = generateOTP();
+    const phoneValidator = phone(data.phone, { country: "NIGERIA" });
+    if (phoneValidator.isValid) {
+      parsed.phoneNumber = phoneValidator.phoneNumber;
+
+      setSendingEmail(true);
+      await sendSMS(
+        phoneValidator.phoneNumber,
+        `Please use this code to access your BGL account as soon as possible. It expires in 30 minutes. code - ${code}`
+      );
+      setSendingEmail(false);
+    } else {
+      parsed.phoneError = "invalid_phone";
+    }
+
+    parsed.email = userEmail;
     //TODO - Send Email to User
     setSendingEmail(false);
     await sendEmail(
@@ -103,6 +135,8 @@ export default function LoginPage() {
 
   const changeEmail = () => {
     parsed.email = undefined;
+    parsed.phoneNumber = undefined;
+    parsed.phoneError = undefined;
     const stringified = queryString.stringify(parsed);
     navigate(`/login?${stringified}`);
   };
@@ -124,13 +158,15 @@ export default function LoginPage() {
               <div className="mb-6">
                 <label
                   className="block mb-2 text-coolGray-800 font-medium"
-                  for=""
+                  htmlFor="email"
                 >
                   Email
                 </label>
                 <input
                   className="appearance-none block w-full p-3 leading-5 text-coolGray-900 border border-coolGray-200 rounded-lg shadow-md placeholder-coolGray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 text-center"
-                  type="email"
+                  type="text"
+                  typeof="email"
+                  id="email"
                   placeholder="name@email.com"
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -159,7 +195,8 @@ export default function LoginPage() {
                 <small className=" text-red-500 font-medium ">{error}</small>
                 <p className="text-lg text-coolGray-500 font-medium mt-6">
                   Passcode will be sent to{" "}
-                  {email || parsed.email || "your email"}.
+                  {email || parsed.email || "your email"} and your registered
+                  phone number.
                 </p>
               </>
             </form>
@@ -167,12 +204,18 @@ export default function LoginPage() {
           {emailHasBeenSent && (
             <form onSubmit={verifyPasscode}>
               <div className="mb-4">
+                {phoneError && (
+                  <small className=" text-red-500 font-light text-xs ">
+                    Contact admin to set up your phone number and receive your
+                    passcode via SMS.
+                  </small>
+                )}
                 <label
                   className="block mb-2 text-coolGray-800 font-medium"
                   for=""
                 >
                   Enter Passcode sent to {email || parsed.email || "your email"}
-                  .
+                  {phoneNumber ? ` and ${phoneNumber}` : ""}.
                 </label>
                 <input
                   className="appearance-none block w-full p-3 leading-5 text-coolGray-900 border border-coolGray-200 rounded-lg shadow-md placeholder-coolGray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 text-center"
