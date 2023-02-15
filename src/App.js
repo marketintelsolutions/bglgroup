@@ -10,6 +10,7 @@ import SchemeofArrangement from "./Screens/SchemeofArrangement";
 import UserDetailsPage from "./Screens/UserDetailsPage";
 import AddUserPage from "./Screens/AddUserPage";
 import AdminSignUpPage from "./Screens/AdminSignUpPage";
+import Agm from "./Screens/Agm";
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
           <Route path="/admin-signup" element={<AdminSignUpPage />} />
           <Route path="/admin-login" element={<AdminLoginPage />} />
           <Route path="/" element={<Homepage />} />
+          {/* new */}
+          <Route path="/agm" element={<Agm />} />
         </Routes>
       </Router>
       <Alert />

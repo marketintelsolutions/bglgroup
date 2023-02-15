@@ -104,7 +104,8 @@ const signUpUser = async (email: string, password: string) => {
 };
 const signInUser = async (email: string, password: string) => {
   let error = null;
-  let user = null;
+  // let user = null;
+  let user;
 
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
