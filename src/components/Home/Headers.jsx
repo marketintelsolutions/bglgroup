@@ -181,7 +181,7 @@ export default function Headers() {
                     Scheme of Arrangement
                   </Link>
                   <Link
-                    className="mt-7 inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-green-600 hover:text-white font-medium text-center bg-white hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-white rounded-md shadow-sm"
+                    className="mt-7 inline-block py-3 px-5 w-[70%] text-base md:text-lg leading-4 text-green-600 hover:text-white font-medium text-center bg-white hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-white rounded-md shadow-sm"
                     to="/agm"
                     target="_blank"
                   >
