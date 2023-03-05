@@ -185,7 +185,7 @@ export default function Headers() {
                     to="/agm"
                     target="_blank"
                   >
-                    AGM
+                    EGM
                   </Link>
                 </div>
               </div>
