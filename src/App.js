@@ -10,7 +10,7 @@ import SchemeofArrangement from "./Screens/SchemeofArrangement";
 import UserDetailsPage from "./Screens/UserDetailsPage";
 import AddUserPage from "./Screens/AddUserPage";
 import AdminSignUpPage from "./Screens/AdminSignUpPage";
-import Agm from "./Screens/Agm";
+import Egm from "./Screens/Egm";
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
           <Route path="/admin-login" element={<AdminLoginPage />} />
           <Route path="/" element={<Homepage />} />
           {/* new */}
-          <Route path="/agm" element={<Agm />} />
+          <Route path="/egm" element={<Egm />} />
         </Routes>
       </Router>
       <Alert />
