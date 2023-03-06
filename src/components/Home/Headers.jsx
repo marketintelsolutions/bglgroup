@@ -185,7 +185,7 @@ export default function Headers() {
                     to="/Egm"
                     target="_blank"
                   >
-                    EGM
+                    Extra-Ordinary <br /> General Meeting
                   </Link>
                 </div>
               </div>
