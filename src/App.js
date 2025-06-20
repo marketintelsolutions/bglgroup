@@ -11,6 +11,7 @@ import UserDetailsPage from "./Screens/UserDetailsPage";
 import AddUserPage from "./Screens/AddUserPage";
 import AdminSignUpPage from "./Screens/AdminSignUpPage";
 import Egm from "./Screens/Egm";
+import Annual from "./Screens/Annual";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           {/* new */}
           <Route path="/egm" element={<Egm />} />
+          <Route path="/annual" element={<Annual />} />
         </Routes>
       </Router>
       <Alert />
