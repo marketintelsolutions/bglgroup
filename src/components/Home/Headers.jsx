@@ -172,28 +172,28 @@ export default function Headers() {
                 and knowledge together to deliver values greater than the sum of
                 its parts
               </p>
-              <div className="flex flex-wrap justify-center">
-                <div className="w-full md:w-auto py-1 md:py-0 md:mr-4">
+              <div className="flex w-full mx-auto max-w-[550px]  items-center justify-center">
+                <div className="w-full  md:w-full py-1 md:py-0 md:mr-0">
                   <Link
                     className="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-green-50 font-medium text-center bg-green-500 hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-green-500 rounded-md shadow-sm"
                     to="/scheme-of-arrangement"
                   >
                     Scheme of Arrangement
                   </Link>
-                  <div className="mt-7 flex gap-10">
+                  <div className="mt-7 flex gap-5">
                     <Link
-                      className=" inline-block py-3 px-5 w-full text-base md:text-lg leading-4 text-green-600 hover:text-white font-medium text-center bg-white hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-white rounded-md shadow-sm"
+                      className=" inline-block py-3 px-1 w-full text-base md:text-lg leading-4 text-green-600 hover:text-white font-medium text-center bg-white hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-white rounded-md shadow-sm"
                       to="/Egm"
                       target="_blank"
                     >
-                      AGM <br /> 2014 - 2024
+                      AGM 2014 - 2024
                     </Link>
                     <Link
-                      className=" inline-block py-3 px-5 w-full text-base md:text-lg leading-4 text-green-600 hover:text-white font-medium text-center bg-white hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-white rounded-md shadow-sm"
+                      className=" inline-block break-keep  py-3 px-0 w-full text-base md:text-lg leading-4 text-green-600 hover:text-white font-medium text-center bg-white hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-white rounded-md shadow-sm"
                       to="/annual"
                       target="_blank"
                     >
-                      Annual Report <br /> 2014 - 2024
+                      Annual Report 2014 - 2024
                     </Link>
                   </div>
                 </div>
