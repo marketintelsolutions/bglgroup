@@ -42,7 +42,7 @@ export default function Contact() {
                 className="text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
                 href="mailto:info@bglafrica.com"
               >
-                info@info@bglafrica.com
+                info@bglafrica.com
               </a>
             </div>
           </div>
