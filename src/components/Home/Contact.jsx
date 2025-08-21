@@ -40,9 +40,9 @@ export default function Contact() {
               </h3>
               <a
                 className="text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-                href="mailto:info@bglgroup.ng"
+                href="mailto:info@bglafrica.com"
               >
-                info@bglgroup.ng
+                info@bglafrica.com
               </a>
             </div>
           </div>
